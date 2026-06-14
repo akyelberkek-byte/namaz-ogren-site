@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Namaz Öğren — Ücretsiz, reklamsız namaz rehberi</title>
+<meta name="description" content="Namaz Öğren: namazı sıfırdan öğreten, namaz vakitleri, ezan bildirimi, kıble, Kur'an, bilgi testi ve daha fazlasını sunan %100 ücretsiz, reklamsız bir hayır uygulaması. Tüm veriler cihazınızda." />
+<meta name="theme-color" content="#0E5A56" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<meta property="og:title" content="Namaz Öğren — Ücretsiz namaz rehberi" />
+<meta property="og:description" content="Namazı öğren, vakitleri kaçırma, kıbleyi bul, Kur'an oku. %100 ücretsiz, reklamsız, hayır işi." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.namazogren.com" />
+<meta property="og:image" content="https://www.namazogren.com/logo.svg" />
+<meta name="twitter:card" content="summary" />
+<style>
+:root{
+  --teal:#0E5A56; --teal-d:#0A3F3C; --teal-l:#2FA98F; --gold:#C9A24B; --gold-d:#9C7A2E;
+  --paper:#F4EFE4; --ink:#14201A; --ink-soft:#4a564f; --card:#ffffff; --line:rgba(14,90,86,.12);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --paper:#0C100E; --ink:#E6EEEC; --ink-soft:#9fb0aa; --card:#141A17; --line:rgba(201,162,75,.18); }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-l);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:1rem;border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-ghost{background:transparent;color:var(--teal-l);border-color:var(--line)}
+
+/* Hero */
+header{background:linear-gradient(160deg,var(--teal) 0%,var(--teal-d) 65%,#06302d 100%);color:#fff;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% -10%,rgba(201,162,75,.22),transparent 55%);pointer-events:none}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 20px 72px;position:relative;z-index:1}
+.hero img{width:104px;height:104px;border-radius:26px;box-shadow:0 14px 40px rgba(0,0,0,.3);background:#fff}
+.hero h1{font-size:2.6rem;margin:22px 0 6px;letter-spacing:-.02em;line-height:1.08}
+.hero .tag{font-size:1.18rem;color:rgba(255,255,255,.92);max-width:560px;margin:0 auto}
+.pill{display:inline-flex;align-items:center;gap:7px;margin-top:22px;padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(201,162,75,.5);font-weight:600;font-size:.95rem}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.hero-cta .btn-primary{background:var(--gold);color:#1c1407}
+.hero-cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+
+/* Sections */
+section{padding:62px 0}
+h2{font-size:1.9rem;text-align:center;letter-spacing:-.02em;margin-bottom:8px}
+.sub{text-align:center;color:var(--ink-soft);max-width:600px;margin:0 auto 40px}
+
+/* Features */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;border-top:3px solid var(--gold)}
+.feat .ic{font-size:2rem;line-height:1}
+.feat h3{font-size:1.15rem;margin:12px 0 6px}
+.feat p{color:var(--ink-soft);font-size:.96rem}
+
+/* Free band */
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:56px 20px}
+.band .em{font-size:2.6rem}
+.band h2{margin:0}
+.band p{color:var(--ink-soft);max-width:620px}
+
+/* Privacy chips */
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.chip{background:rgba(14,90,86,.08);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:600;color:var(--teal-l)}
+
+/* Download */
+.dl{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.store{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 22px;min-width:210px}
+.store .ic{font-size:1.8rem}
+.store small{display:block;color:var(--ink-soft);font-size:.78rem}
+.store strong{font-size:1.05rem}
+.soon{font-size:.72rem;background:var(--gold);color:#1c1407;border-radius:999px;padding:2px 9px;font-weight:700;margin-inline-start:6px}
+
+footer{background:var(--teal-d);color:rgba(255,255,255,.85);padding:40px 20px;text-align:center;font-size:.92rem}
+footer a{color:var(--gold)}
+footer .row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+@media(max-width:560px){.hero h1{font-size:2.1rem}h2{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <img src="logo.svg" alt="Namaz Öğren logosu" />
+    <h1>Namaz Öğren</h1>
+    <p class="tag">Namazı sıfırdan öğreten; vakitleri, kıbleyi, Kur'an'ı ve daha fazlasını tek çatıda toplayan rehberiniz.</p>
+    <span class="pill">🤲 %100 Ücretsiz · Reklamsız · Hayır işi</span>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#indir">Uygulamayı edin</a>
+      <a class="btn btn-ghost" href="#ozellikler">Özellikler</a>
+    </div>
+  </div>
+</header>
+
+<section id="ozellikler" class="wrap">
+  <h2>Her şey cebinizde</h2>
+  <p class="sub">İbadetinizi kolaylaştıran kapsamlı araçlar — üstelik internetsiz de çalışır.</p>
+  <div class="grid">
+    <div class="feat"><div class="ic">🕌</div><h3>Namaz Vakitleri & Ezan</h3><p>Diyanet yöntemiyle hesaplanan vakitler, geri sayım ve vaktinde ezanlı bildirim.</p></div>
+    <div class="feat"><div class="ic">🧭</div><h3>Kıble Pusulası</h3><p>Bulunduğunuz yerden Kâbe yönünü canlı pusulayla gösterir.</p></div>
+    <div class="feat"><div class="ic">📖</div><h3>Adım Adım Namaz Rehberi</h3><p>Her namaz için resimli, sesli "İmam Modu" ile adım adım anlatım.</p></div>
+    <div class="feat"><div class="ic">📿</div><h3>Tesbihat & Zikirmatik</h3><p>Namaz sonrası rehberli tesbihat ve özelleştirilebilir dijital zikirmatik.</p></div>
+    <div class="feat"><div class="ic">📕</div><h3>Kur'an & Hatim Takibi</h3><p>Gerçek Kur'an metni + meal, sesli okuma ve hatim planı.</p></div>
+    <div class="feat"><div class="ic">🎲</div><h3>Bilgi Testi</h3><p>40'tan fazla kategoride yüzlerce doğrulanmış soruyla İslâmî bilgi yarışı.</p></div>
+    <div class="feat"><div class="ic">🧒</div><h3>Çocuk Modu</h3><p>Çocuklar için renkli, oyunlaştırılmış öğrenme deneyimi.</p></div>
+    <div class="feat"><div class="ic">🌙</div><h3>Ramazan & Cuma</h3><p>İftar/sahur sayacı, mukabele, Cuma ve mübarek gün özel bölümleri.</p></div>
+    <div class="feat"><div class="ic">🧮</div><h3>Kaza & Zekât</h3><p>Kaza namazı/orucu takibi ve zekât–fitre hesaplama araçları.</p></div>
+    <div class="feat"><div class="ic">📜</div><h3>Siyer · Esmâ · Hadis</h3><p>Peygamber yolu, 99 Esmâ-i Hüsnâ ve sahih hadis derlemeleri.</p></div>
+    <div class="feat"><div class="ic">🌍</div><h3>4 Dil</h3><p>Türkçe, İngilizce, Almanca ve Arapça arayüz desteği.</p></div>
+    <div class="feat"><div class="ic">📴</div><h3>Çevrimdışı</h3><p>İnternet olmadan da çalışır; hesap ya da abonelik gerektirmez.</p></div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="em">🤲</div>
+    <h2>Tamamen ücretsiz, sonsuza kadar</h2>
+    <p>Namaz Öğren bir <strong>hayır işidir</strong>. Ücret, abonelik, reklam veya gizli satın alma yoktur. Tüm özellikler herkese açıktır. Niyetimiz bir sadaka-i câriye bırakmaktır.</p>
+  </div>
+</div>
+
+<section class="wrap" style="text-align:center">
+  <h2>Gizliliğiniz esastır</h2>
+  <p class="sub">Uygulama "yerel öncelikli" çalışır — verileriniz yalnızca kendi cihazınızda kalır.</p>
+  <div class="chips">
+    <span class="chip">Reklam yok</span>
+    <span class="chip">İzleme yok</span>
+    <span class="chip">Hesap yok</span>
+    <span class="chip">Bulut yok</span>
+    <span class="chip">Veri satışı yok</span>
+  </div>
+  <p style="margin-top:20px"><a href="privacy.html">Gizlilik Politikası →</a></p>
+</section>
+
+<section id="indir" class="band">
+  <div class="wrap">
+    <div class="em">📲</div>
+    <h2>Uygulamayı edinin</h2>
+    <p>iOS ve Android için yakında mağazalarda.</p>
+    <div class="dl">
+      <div class="store"><span class="ic">🍎</span><div><small>App Store</small><strong>iOS<span class="soon">Yakında</span></strong></div></div>
+      <div class="store"><span class="ic">🤖</span><div><small>Google Play</small><strong>Android<span class="soon">Yakında</span></strong></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="row">
+    <a href="#ozellikler">Özellikler</a>
+    <a href="privacy.html">Gizlilik</a>
+    <a href="mailto:akyelberke@gmail.com">İletişim</a>
+  </div>
+  <p>© 2026 Namaz Öğren · Bir hayır işi olarak sunulmaktadır 🤲</p>
+</footer>
+</body>
+</html>
