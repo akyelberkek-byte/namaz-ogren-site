@@ -1,71 +1,145 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Gizlilik Politikası — Namaz Öğren</title>
+<meta name="description" content="Namaz Öğren: reklam yok, izleme yok, hesap yok, bulut yok, veri satışı yok. Tüm verileriniz yalnızca cihazınızda." />
+<link rel="canonical" href="https://namazogren.com/privacy.html" />
+<meta name="robots" content="index, follow" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#F4EFE4" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#06181A" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="apple-touch-icon.png" sizes="180x180" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="mask-icon" href="favicon.svg" color="#0E5A56" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Namaz Öğren" />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:title" content="Gizlilik Politikası — Namaz Öğren" />
+<meta property="og:description" content="Reklam yok, izleme yok, hesap yok, bulut yok, veri satışı yok. Tüm verileriniz yalnızca cihazınızda." />
+<meta property="og:url" content="https://namazogren.com/privacy.html" />
+<meta property="og:image" content="https://namazogren.com/og.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Namaz Öğren — ücretsiz, reklamsız namaz rehberi uygulaması" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gizlilik Politikası — Namaz Öğren" />
+<meta name="twitter:description" content="Reklam yok, izleme yok, hesap yok, bulut yok, veri satışı yok. Tüm verileriniz yalnızca cihazınızda." />
+<meta name="twitter:image" content="https://namazogren.com/og.png" />
+<meta name="twitter:image:alt" content="Namaz Öğren — ücretsiz, reklamsız namaz rehberi uygulaması" />
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.7;
-         max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; color: #1a1a1a; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #131613; } a { color: #6fcf97; } }
-  h1 { font-size: 1.8rem; } h2 { font-size: 1.2rem; margin-top: 2rem; color: #15803d; }
-  @media (prefers-color-scheme: dark) { h2 { color: #6fcf97; } }
-  .updated { color: #777; font-size: .9rem; }
-  ul { padding-left: 1.2rem; } code { background: rgba(127,127,127,.15); padding: 1px 5px; border-radius: 4px; }
-  .box { background: rgba(21,128,61,.08); border-left: 3px solid #15803d; padding: 12px 16px; border-radius: 8px; }
+  /* Token modeli index.html ile birebir hizalı: --teal/--gold taban değerleri
+     iki sayfada AYNI; koyu temada okunur aksan için --teal-l / --heading ayrı. */
+  :root{
+    color-scheme: light dark;
+    --paper:#F4EFE4; --ink:#15302C; --ink-soft:#42554F; --muted:#5E6C65;
+    --teal:#0E5A56; --teal-l:#1A7C75; --gold:#C8A24B; --gold-ink:#1C1407;
+    --link:#0E5A56; --heading:#0E5A56;
+    --line:rgba(14,90,86,.12); --box-bg:rgba(14,90,86,.07);
+    --code-bg:rgba(14,90,86,.10);
+    --sel-bg:#0E5A56; --sel-fg:#fff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#06181A; --ink:#E6EEEC; --ink-soft:#A9BAB5; --muted:#7C8C87;
+      --teal:#0E5A56; --teal-l:#2BB3A6; --gold:#C8A24B;
+      --link:#2BB3A6; --heading:#2BB3A6;
+      --line:rgba(230,238,236,.10); --box-bg:rgba(43,179,166,.10);
+      --code-bg:rgba(230,238,236,.10);
+      --sel-bg:#C8A24B; --sel-fg:#15302C;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.7;
+    color:var(--ink);background:var(--paper);
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  }
+  main{max-width:760px;margin:0 auto;padding:32px max(20px,env(safe-area-inset-left)) 64px max(20px,env(safe-area-inset-right))}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px;box-shadow:0 0 0 5px rgba(10,63,60,.55)}
+  ::selection{background:var(--sel-bg);color:var(--sel-fg)}
+  ::-moz-selection{background:var(--sel-bg);color:var(--sel-fg)}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:50;background:var(--gold);color:var(--gold-ink);font-weight:700;padding:12px 18px;border-radius:0 0 10px 0}
+  .skip-link:focus{left:0}
+  .back{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.92rem;margin-bottom:20px}
+  h1{font-size:clamp(1.6rem,5vw,2.1rem);letter-spacing:-.01em}
+  h2{font-size:clamp(1.2rem,3.6vw,1.45rem);margin-top:2rem;color:var(--heading)}
+  p{margin-top:.75rem}
+  .updated{color:var(--muted);font-size:.9rem;margin-top:.4rem}
+  ul{padding-left:1.2rem;margin-top:.6rem}
+  li{margin-top:.3rem}
+  code{background:var(--code-bg);padding:1px 5px;border-radius:4px}
+  .box{background:var(--box-bg);border-left:3px solid var(--teal-l);padding:14px 18px;border-radius:10px;margin-top:1.2rem}
+  footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+  footer a{color:var(--link)}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition-duration:.01ms !important} }
 </style>
 </head>
 <body>
-  <h1>Gizlilik Politikası</h1>
-  <p class="updated">Uygulama: <strong>Namaz Öğren</strong> · Son güncelleme: 4 Haziran 2026</p>
+  <a class="skip-link" href="#icerik">İçeriğe atla</a>
+  <main id="icerik">
+    <a class="back" href="index.html"><span aria-hidden="true">←</span> Ana sayfaya dön</a>
 
-  <div class="box">
-    <strong>Özet:</strong> Namaz Öğren tamamen ücretsiz, hayır amaçlı bir uygulamadır.
-    <strong>Reklam yok, izleme yok, hesap yok, bulut yok, veri satışı yok.</strong>
-    Tüm verileriniz yalnızca <strong>kendi cihazınızda</strong> saklanır.
-  </div>
+    <h1>Gizlilik Politikası</h1>
+    <p class="updated">Uygulama: <strong>Namaz Öğren</strong> · Son güncelleme: 4 Haziran 2026</p>
 
-  <h2>1. Topladığımız veriler</h2>
-  <p>Uygulama "yerel öncelikli" (local-first) çalışır. Aşağıdaki veriler <strong>yalnızca
-  cihazınızda</strong> (tarayıcı deposu / cihaz veritabanı) tutulur ve varsayılan olarak
-  hiçbir sunucuya gönderilmez:</p>
-  <ul>
-    <li>Namaz takip/check-in kayıtlarınız, kaza ve istatistik verileri</li>
-    <li>Tercihleriniz (tema, yazı boyutu, dil, şehir, bildirim ayarları)</li>
-    <li>Profil bilgileri (ad, cinsiyet, seviye — yalnızca girerseniz)</li>
-    <li>Zikirmatik, Kur'an okuma ilerlemesi, çocuk profilleri</li>
-  </ul>
+    <div class="box">
+      <strong>Özet:</strong> Namaz Öğren tamamen ücretsiz, hayır amaçlı bir uygulamadır.
+      <strong>Reklam yok, izleme yok, hesap yok, bulut yok, veri satışı yok.</strong>
+      Tüm verileriniz yalnızca <strong>kendi cihazınızda</strong> saklanır.
+    </div>
 
-  <h2>2. Konum</h2>
-  <p>Konum izni <strong>yalnızca</strong> namaz vakitlerini ve kıble yönünü hesaplamak için
-  kullanılır. Konumunuz cihazda işlenir; <strong>bir sunucuya gönderilmez veya saklanmaz</strong>.
-  İzin vermezseniz şehir seçiminize göre hesaplama yapılır.</p>
+    <h2>1. Topladığımız veriler</h2>
+    <p>Uygulama "yerel öncelikli" (local-first) çalışır. Aşağıdaki veriler <strong>yalnızca
+    cihazınızda</strong> (tarayıcı deposu / cihaz veritabanı) tutulur ve varsayılan olarak
+    hiçbir sunucuya gönderilmez:</p>
+    <ul>
+      <li>Namaz takip/check-in kayıtlarınız, kaza ve istatistik verileri</li>
+      <li>Tercihleriniz (tema, yazı boyutu, dil, şehir, bildirim ayarları)</li>
+      <li>Profil bilgileri (ad, cinsiyet, seviye — yalnızca girerseniz)</li>
+      <li>Zikirmatik, Kur'an okuma ilerlemesi, çocuk profilleri</li>
+    </ul>
 
-  <h2>3. Bildirimler</h2>
-  <p>Namaz vakti hatırlatmaları cihazınızda yerel olarak planlanır. Bildirim için herhangi bir
-  veri dışarı aktarılmaz.</p>
+    <h2>2. Konum</h2>
+    <p>Konum izni <strong>yalnızca</strong> namaz vakitlerini ve kıble yönünü hesaplamak için
+    kullanılır. Konumunuz cihazda işlenir; <strong>bir sunucuya gönderilmez veya saklanmaz</strong>.
+    İzin vermezseniz şehir seçiminize göre hesaplama yapılır.</p>
 
-  <h2>4. Hesap / bulut / cihaz değişimi</h2>
-  <p>Uygulamada <strong>hesap, giriş veya bulut senkronizasyonu YOKTUR.</strong> Hiçbir veri
-  bir sunucuya gönderilmez; her şey yalnızca cihazınızda kalır.</p>
-  <p>Cihaz değiştirirken Ayarlar &gt; <em>Yedekleme</em> ile verilerinizi tek bir dosya olarak
-  dışa aktarabilir ve yeni cihazda içe aktarabilirsiniz. Bu dosya yalnızca <strong>sizin
-  başlattığınız</strong> bir işlemle oluşturulur ve onu nereye göndereceğiniz tamamen sizin
-  kontrolünüzdedir; uygulama dosyayı hiçbir yere yüklemez.</p>
+    <h2>3. Bildirimler</h2>
+    <p>Namaz vakti hatırlatmaları cihazınızda yerel olarak planlanır. Bildirim için herhangi bir
+    veri dışarı aktarılmaz.</p>
 
-  <h2>5. Çocuklar</h2>
-  <p>"Çocuk Modu" profilleri yalnızca cihazda tutulur; çocuklardan çevrimiçi veri toplanmaz.</p>
+    <h2>4. Hesap / bulut / cihaz değişimi</h2>
+    <p>Uygulamada <strong>hesap, giriş veya bulut senkronizasyonu YOKTUR.</strong> Hiçbir veri
+    bir sunucuya gönderilmez; her şey yalnızca cihazınızda kalır.</p>
+    <p>Cihaz değiştirirken Ayarlar &gt; <em>Yedekleme</em> ile verilerinizi tek bir dosya olarak
+    dışa aktarabilir ve yeni cihazda içe aktarabilirsiniz. Bu dosya yalnızca <strong>sizin
+    başlattığınız</strong> bir işlemle oluşturulur ve onu nereye göndereceğiniz tamamen sizin
+    kontrolünüzdedir; uygulama dosyayı hiçbir yere yüklemez.</p>
 
-  <h2>6. Üçüncü taraflar</h2>
-  <p>Hiçbir üçüncü taraf hizmet kullanılmaz: reklam ağı yok, analitik/izleme (Google
-  Analytics vb.) yok, Firebase yok, dış sunucu yok.</p>
+    <h2>5. Çocuklar</h2>
+    <p>"Çocuk Modu" profilleri yalnızca cihazda tutulur; çocuklardan çevrimiçi veri toplanmaz.</p>
 
-  <h2>7. Verilerinizi silme</h2>
-  <p>Ayarlar &gt; <em>Verileri Sil</em> ile cihazdaki tüm verileriniz kalıcı olarak silinir.
-  Uygulamayı kaldırmak da tüm verileri siler.</p>
+    <h2>6. Üçüncü taraflar</h2>
+    <p>Hiçbir üçüncü taraf hizmet kullanılmaz: reklam ağı yok, analitik/izleme (Google
+    Analytics vb.) yok, Firebase yok, dış sunucu yok.</p>
 
-  <h2>8. İletişim</h2>
-  <p>Sorularınız için: <a href="mailto:akyelberke@gmail.com">akyelberke@gmail.com</a></p>
+    <h2>7. Verilerinizi silme</h2>
+    <p>Ayarlar &gt; <em>Verileri Sil</em> ile cihazdaki tüm verileriniz kalıcı olarak silinir.
+    Uygulamayı kaldırmak da tüm verileri siler.</p>
+
+    <h2>8. İletişim</h2>
+    <p>Sorularınız için: <a href="mailto:akyelberke@gmail.com">akyelberke@gmail.com</a></p>
+
+    <footer>
+      <p>© 2026 Namaz Öğren · Bir hayır işi olarak sunulmaktadır <span aria-hidden="true">🤲</span></p>
+    </footer>
+  </main>
 </body>
 </html>

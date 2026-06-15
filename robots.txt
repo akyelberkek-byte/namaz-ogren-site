@@ -1,0 +1,5 @@
+# Namaz Öğren — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://namazogren.com/sitemap.xml
