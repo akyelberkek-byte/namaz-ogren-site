@@ -216,10 +216,13 @@ header::after{
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px}
 .hero-cta .btn-primary{background:var(--gold);color:var(--gold-ink)}
 .hero-cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-trust{margin-top:16px;font-size:.86rem;color:rgba(255,255,255,.74);letter-spacing:.01em}
 
 /* GÜVEN ŞERİDİ */
 .trust{background:var(--card);border-bottom:1px solid var(--line)}
-.trust .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:18px 36px;padding:24px 20px;text-align:center}
+.trust .wrap{padding:24px 20px;text-align:center}
+.trust-head{margin-bottom:14px}
+.trust-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px 36px}
 .trust .t{display:flex;flex-direction:column;line-height:1.2}
 .trust b{font-size:clamp(1.3rem,4vw,1.55rem);color:var(--teal-l)}
 .trust span{font-size:.82rem;color:var(--ink-soft);font-weight:600;letter-spacing:.02em}
@@ -362,9 +365,8 @@ nav a, footer a{display:inline-flex;align-items:center;min-height:var(--tap);pad
   .feat{padding:20px}
   .chips{gap:8px}
   .pill{font-size:.9rem}
-  /* Güven şeridi: 5 öğe dengesiz sarmasın → 2 sütun, son öğe tam genişlik */
-  .trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 16px}
-  .trust .t:last-child{grid-column:1 / -1}
+  /* Güven şeridi: 6 öğe → 2 sütun düzgün 3×2 */
+  .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 16px}
 }
 @media (max-width:360px){
   :root{--gutter:14px}
@@ -488,20 +490,25 @@ nav a, footer a{display:inline-flex;align-items:center;min-height:var(--tap);pad
     <p class="tag">Namazı sıfırdan, adım adım öğrenin; vakitleri, kıbleyi ve Kur'an'ı tek uygulamada takip edin. Reklamsız, hesapsız ve internetsiz de çalışır.</p>
     <span class="pill">%100 Ücretsiz · Reklamsız · Çevrimdışı çalışır</span>
     <nav class="hero-cta" aria-label="Birincil">
-      <a class="btn btn-primary" href="#indir">Ücretsiz indir</a>
+      <a class="btn btn-primary" href="#indir">Çıkınca haber ver</a>
       <a class="btn btn-ghost" href="#ozellikler">Neler var?</a>
     </nav>
+    <p class="hero-trust">Hesap yok · İzleme yok · Veriler yalnızca cihazınızda</p>
   </div>
 </header>
 
 <!-- GÜVEN ŞERİDİ -->
 <div class="trust">
   <div class="wrap">
-    <div class="t"><b>30+</b><span>özellik</span></div>
-    <div class="t"><b>460</b><span>soruluk bilgi testi</span></div>
-    <div class="t"><b>4 dil</b><span>TR · EN · DE · AR</span></div>
-    <div class="t"><b>Çevrimdışı</b><span>içerik internetsiz çalışır</span></div>
-    <div class="t"><b>0 ₺</b><span>sonsuza kadar ücretsiz</span></div>
+    <p class="kicker trust-head">Uygulama neler içeriyor</p>
+    <div class="trust-grid">
+      <div class="t"><b>30+</b><span>özellik</span></div>
+      <div class="t"><b>460</b><span>soruluk bilgi testi</span></div>
+      <div class="t"><b>4 dil</b><span>TR · EN · DE · AR</span></div>
+      <div class="t"><b>Diyanet</b><span>yöntemiyle vakitler</span></div>
+      <div class="t"><b>Çevrimdışı</b><span>içerik internetsiz çalışır</span></div>
+      <div class="t"><b>0 ₺</b><span>sonsuza kadar ücretsiz</span></div>
+    </div>
   </div>
 </div>
 
